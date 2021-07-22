@@ -1,14 +1,13 @@
 const mongoose = require('mongoose')
 
-
-
-async function connect(){
-    await mongoose.connect('mongodb://localhost/wanxi_database', {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true
-    }).then(db => console.log('Database: Connected'));
-};
-
-
-module.exports = { connect };
+mongoose.connect('mongodb://localhost/wanxi_database', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
+.then(db => {
+    console.log(`Connected to MongoDB: ${db.connection.host}`)
+})
+.catch(err => {
+    console.log("Error connecting to DB");
+})

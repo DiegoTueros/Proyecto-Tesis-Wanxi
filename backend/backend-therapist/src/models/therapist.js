@@ -7,12 +7,4 @@ const therapistSchema = new Schema({
     password: String
 });
 
-therapistSchema.methods.encryptPassword = async(password)=>{
-    const salt = await bcrypt.genSalt(10);
-    return bcrypt.hash(password, salt);
-};
-
-therapistSchema.methods.validatePassword = function(password){
-    return bcrypt.compare(password, this.password);
-}
 module.exports = model('Therapist', therapistSchema)
