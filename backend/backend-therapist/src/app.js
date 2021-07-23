@@ -14,6 +14,8 @@ app.use('/auth', Routes.AuthenticationRoutes);
 app.use('/patients', Routes.PatientRoutes);
 app.use('/patients', Routes.SelfRegistrationRoutes);
 app.use('/patients', Routes.AchievementRoutes);
+app.use('/patients', Routes.HelpRoutes);
+app.use('/patients', Routes.HelpTimesRoutes);
 
 
 

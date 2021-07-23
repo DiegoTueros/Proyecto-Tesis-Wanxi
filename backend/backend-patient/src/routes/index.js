@@ -1,5 +1,7 @@
 module.exports = {
     AuthenticationRoutes: require('./authentication'),
     SelfRegistrationRoutes: require('./self-registration'),
-    AchievementRoutes: require('./achievement')
+    AchievementRoutes: require('./achievement'),
+    HelpRoutes: require('./help'),
+    HelpTimesRoutes: require('./help-times'),
 }
