@@ -8,7 +8,6 @@ const { responseToMongooseError } = require('../helpers/responses');
 function registerPatient(req, res) {
     let body = req.body;
     const therapistId = req.user._id;
-    console.log(therapistId)
     Patient.findOne({ email: body.email })
         .exec()
         .then(patient => {
@@ -28,11 +27,8 @@ function registerPatient(req, res) {
                 diagnostic: body.diagnostic,
                 therapist: therapistId
             });
-            console.log(user)
             user.save()
                 .then((result) => {
-                    console.log("qdsvsvsdfeefwe")
-                    console.log(result)
                     res.status(201).json({
                         message: 'Paciente registrado satisfactoriamente'
                     });

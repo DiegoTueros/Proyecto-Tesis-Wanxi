@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended: false}));
 
 app.use('/auth', Routes.AuthenticationRoutes);
 app.use('/patients', Routes.PatientRoutes);
+app.use('/patients', Routes.SelfRegistration);
 
 
 //app.use(require('./routes/therapist'))

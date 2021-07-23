@@ -60,7 +60,6 @@ function signin(req, res) {
                 firstname: therapist.firstname,
                 lastname: therapist.lastname
             }
-            console.log(JWT_KEY)
             const token = jwt.sign(payload, JWT_KEY, expiresIn);
             const response = {
                 token,
