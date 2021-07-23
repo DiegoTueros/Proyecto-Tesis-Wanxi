@@ -12,5 +12,6 @@ app.use(express.urlencoded({extended: false}));
 
 app.use('/auth', Routes.AuthenticationRoutes);
 app.use('/patient', Routes.SelfRegistrationRoutes);
+app.use('/patient', Routes.AchievementRoutes);
 
 module.exports = app
