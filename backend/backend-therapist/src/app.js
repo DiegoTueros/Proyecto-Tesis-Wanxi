@@ -16,15 +16,7 @@ app.use('/patients', Routes.SelfRegistrationRoutes);
 app.use('/patients', Routes.AchievementRoutes);
 app.use('/patients', Routes.HelpRoutes);
 app.use('/patients', Routes.HelpTimesRoutes);
+app.use('/patients', Routes.QuestionRoutes);
+app.use('/question', Routes.OptionRoutes);
 
-
-
-//app.use(require('./routes/therapist'))
-
-
-
-//const cors = require('cors')
-
-
-//app.use(cors);
 module.exports = app

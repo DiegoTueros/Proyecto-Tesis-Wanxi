@@ -11,9 +11,11 @@ app.use(express.urlencoded({extended: false}));
 
 
 app.use('/auth', Routes.AuthenticationRoutes);
-app.use('/patient', Routes.SelfRegistrationRoutes);
+app.use('/self-registration', Routes.SelfRegistrationRoutes);
 app.use('/patient', Routes.AchievementRoutes);
 app.use('/patient', Routes.HelpRoutes);
 app.use('/patient', Routes.HelpTimesRoutes);
+app.use('/question', Routes.QuestionRoutes);
+app.use('/option', Routes.OptionRoutes);
 
 module.exports = app
