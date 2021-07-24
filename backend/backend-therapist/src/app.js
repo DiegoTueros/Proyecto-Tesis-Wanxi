@@ -17,6 +17,6 @@ app.use('/patients', Routes.AchievementRoutes);
 app.use('/patients', Routes.HelpRoutes);
 app.use('/patients', Routes.HelpTimesRoutes);
 app.use('/patients', Routes.QuestionRoutes);
-app.use('/question', Routes.OptionRoutes);
+app.use('/patients/question', Routes.OptionRoutes);
 
 module.exports = app

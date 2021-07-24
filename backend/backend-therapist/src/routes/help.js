@@ -2,10 +2,10 @@ const { Router } = require('express');
 const router = Router();
 
 const HelpController = require('../controllers/help');
+const checkAuth = require('../middlewares/authentication');
 
-
-router.post('/:patientID/addHelp', HelpController.addHelp)
-router.get('/:patientID/getAllHelps', HelpController.getAllHelp)
+router.post('/:patientID/help', checkAuth, HelpController.addHelp)
+router.get('/:patientID/help', checkAuth, HelpController.getAllHelp)
 
 
 

@@ -2,11 +2,12 @@ const { Router } = require('express');
 const router = Router();
 
 const QuestionController = require('../controllers/question');
+const checkAuth = require('../middlewares/authentication');
 
 
-router.post('/:patientID/addQuestion', QuestionController.addQuestion)
-router.get('/:patientID/getAllQuestions', QuestionController.getAllQuestion)
-router.get('/:patientID/getAllQuestionsAnswered', QuestionController.getAllQuestionAnswered)
+router.post('/:patientID/question', checkAuth, QuestionController.addQuestion)
+router.get('/:patientID/question', checkAuth, QuestionController.getAllQuestion)
+router.get('/:patientID/questionsAnswered', checkAuth, QuestionController.getAllQuestionAnswered)
 
 
 

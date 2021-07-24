@@ -2,10 +2,10 @@ const { Router } = require('express');
 const router = Router();
 
 const AchievementController = require('../controllers/achievement');
+const checkAuth = require('../middlewares/authentication');
 
-
-router.post('/:patientID/addAchievement', AchievementController.addAchievement)
-router.get('/:patientID/getAllAchievement', AchievementController.getAllAchievement)
+router.post('/:patientID/Achievement', checkAuth, AchievementController.addAchievement)
+router.get('/:patientID/Achievement', checkAuth, AchievementController.getAllAchievement)
 
 
 

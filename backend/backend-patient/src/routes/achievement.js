@@ -4,6 +4,6 @@ const router = Router();
 const AchievementController = require('../controllers/achievement');
 const checkAuth = require('../middlewares/authentication');
 
-router.get('/getAllAchievement', checkAuth, AchievementController.getAllAchievement)
+router.get('/', checkAuth, AchievementController.getAllAchievement)
 
 module.exports = router;
