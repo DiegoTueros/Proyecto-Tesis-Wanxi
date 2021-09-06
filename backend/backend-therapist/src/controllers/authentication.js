@@ -64,7 +64,6 @@ function signin(req, res) {
             const response = {
                 token,
                 user: {
-                    _id: therapist._id,
                     firstname: therapist.firstname,
                     lastname: therapist.lastname
                 },

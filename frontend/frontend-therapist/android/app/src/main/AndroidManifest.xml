@@ -2,6 +2,7 @@
     package="com.diegotueros.wanxit">
    <application
         android:label="wanxit"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

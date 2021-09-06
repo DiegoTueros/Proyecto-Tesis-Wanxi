@@ -1,4 +1,3 @@
 import 'package:flutter/material.dart';
-
-part 'page_sign_in.dart';
-part 'page_sign_up.dart';
+export 'package:wanxit/views/auth/signin/page_sign_in.dart';
+export 'package:wanxit/views/auth/signup/page_sign_up.dart';

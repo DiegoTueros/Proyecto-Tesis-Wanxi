@@ -39,12 +39,15 @@ class AppFunctions {
   static bool isSuccessfull(int statusCode) =>
       statusCode.toString().startsWith("2");
 
-  static Map<String, String> buildJsonHeader(String token) => {
+  static Map<String, String> buildJsonHeaderWithToken(String token) => {
         'Content-type': 'application/json',
         'Accept': 'application/json',
         'Authorization': token
       };
-
+  static Map<String, String> buildJsonHeader() => {
+        'Content-type': 'application/json',
+        'Accept': 'application/json',
+      };
   static Map<String, String> buildHeader(String token) =>
       {'Authorization': token};
 

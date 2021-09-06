@@ -17,5 +17,6 @@ app.use('/help', Routes.HelpRoutes);
 app.use('/help-times', Routes.HelpTimesRoutes);
 app.use('/question', Routes.QuestionRoutes);
 app.use('/option', Routes.OptionRoutes);
+app.use('/breathing-times', Routes.BreathingTimesRoutes);
 
 module.exports = app

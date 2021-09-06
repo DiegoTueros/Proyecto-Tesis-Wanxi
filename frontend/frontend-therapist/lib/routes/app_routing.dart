@@ -10,4 +10,5 @@ Map<String, WidgetBuilder> getAppRouting() => {
       AppConstants.PAGE_ONBOARDING: (_) => PageOnboarding(),
       AppConstants.PAGE_SIGN_IN: (_) => PageSignIn(),
       AppConstants.PAGE_SIGN_UP: (_) => PageSignUp(),
+      AppConstants.PAGE_ADD_PATIENT: (_) => PageAddPatient()
     };

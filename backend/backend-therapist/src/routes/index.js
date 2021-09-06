@@ -6,5 +6,6 @@ module.exports = {
     HelpRoutes: require('./help'),
     HelpTimesRoutes: require('./help-times'),
     QuestionRoutes: require('./question'),
-    OptionRoutes: require('./option')
+    OptionRoutes: require('./option'),
+    BreathingTimesRoutes: require('./breathing-times')
 }

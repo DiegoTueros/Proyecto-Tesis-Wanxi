@@ -11,7 +11,6 @@ function getAllHelpTimes(req, res){
             const response = {
                 count: docs.length,
                 helpTimes: docs.map((doc)=>{
-                    console.log(doc)
                     return{
                         date: doc.created_at,
                         help: doc.help_id.situation

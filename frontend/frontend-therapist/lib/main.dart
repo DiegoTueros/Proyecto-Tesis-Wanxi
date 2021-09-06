@@ -22,7 +22,7 @@ void main() async {
         ),
       ],
       child: MyApp(
-        showDebugBanner: true,
+        showDebugBanner: false,
       ),
     ),
   );
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'App',
-      initialRoute: AppConstants.PAGE_HOME,
+      initialRoute: AppConstants.PAGE_SIGN_IN,
       routes: getAppRouting(),
       debugShowCheckedModeBanner: showDebugBanner,
       localizationsDelegates: [GlobalMaterialLocalizations.delegate],

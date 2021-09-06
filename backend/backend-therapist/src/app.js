@@ -18,5 +18,5 @@ app.use('/patients', Routes.HelpRoutes);
 app.use('/patients', Routes.HelpTimesRoutes);
 app.use('/patients', Routes.QuestionRoutes);
 app.use('/patients/question', Routes.OptionRoutes);
-
+app.use('/patients', Routes.BreathingTimesRoutes);
 module.exports = app

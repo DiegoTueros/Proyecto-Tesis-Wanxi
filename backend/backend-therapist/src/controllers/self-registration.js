@@ -4,7 +4,7 @@ function getAllSelfRegister(req, res){
     const patientId = req.params.patientID;
     const conditions = { patient_id: patientId };
     SelfRegistration.find(conditions)
-        .select('situation emotions thought duration whatIDo utility')
+        .select('situation emotions thought duration whatIDo utility created_at')
         .exec()
         .then((docs) => {
             const response = {
