@@ -19,4 +19,10 @@ app.use('/patients', Routes.HelpTimesRoutes);
 app.use('/patients', Routes.QuestionRoutes);
 app.use('/patients/question', Routes.OptionRoutes);
 app.use('/patients', Routes.BreathingTimesRoutes);
+app.use('/patients', Routes.EnjoyableActivitiesRoutes);
+app.use('/patients', Routes.EnjActTimesRoutes);
+app.use('/patients', Routes.ImaginalExposureRoutes);
+app.use('/patients', Routes.ImgExpTimesRoutes);
+app.use('/patients', Routes.ChallengeRoutes);
+app.use('/patients', Routes.ChallengeTimesRoutes);
 module.exports = app
