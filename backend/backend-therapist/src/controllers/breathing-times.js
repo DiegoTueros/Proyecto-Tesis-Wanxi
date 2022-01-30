@@ -25,6 +25,7 @@ function getAllBreathingTimes(req, res){
             });
         });
 }
+
 module.exports = {
     getAllBreathingTimes
 };

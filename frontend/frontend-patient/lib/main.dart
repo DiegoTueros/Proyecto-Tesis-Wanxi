@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
+import 'package:wanxi/controllers/providers/providers_files.dart';
 
 import 'package:wanxi/controllers/themes/app_theme.dart';
 import 'package:wanxi/controllers/preferences/app_preferences.dart';
@@ -22,7 +23,7 @@ void main() async {
         ),
       ],
       child: MyApp(
-        showDebugBanner: true,
+        showDebugBanner: false,
       ),
     ),
   );
@@ -37,14 +38,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final currentTheme = Provider.of<AppTheme>(context).currentTheme;
 
-    return MaterialApp(
-      title: 'App',
-      initialRoute: AppConstants.PAGE_HOME,
-      routes: getAppRouting(),
-      debugShowCheckedModeBanner: showDebugBanner,
-      localizationsDelegates: [GlobalMaterialLocalizations.delegate],
-      supportedLocales: [const Locale('en'), const Locale('es')],
-      theme: currentTheme,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => UiProvider(),
+        )
+      ],
+      child: MaterialApp(
+        title: 'App',
+        initialRoute: AppConstants.PAGE_SIGN_IN,
+        routes: getAppRouting(),
+        debugShowCheckedModeBanner: showDebugBanner,
+        localizationsDelegates: [GlobalMaterialLocalizations.delegate],
+        supportedLocales: [const Locale('en'), const Locale('es')],
+        theme: currentTheme,
+      ),
     );
   }
 }

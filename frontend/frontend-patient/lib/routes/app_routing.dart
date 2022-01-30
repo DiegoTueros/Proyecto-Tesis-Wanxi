@@ -9,5 +9,4 @@ Map<String, WidgetBuilder> getAppRouting() => {
       AppConstants.PAGE_SPLASH: (_) => PageSplash(),
       AppConstants.PAGE_ONBOARDING: (_) => PageOnboarding(),
       AppConstants.PAGE_SIGN_IN: (_) => PageSignIn(),
-      AppConstants.PAGE_SIGN_UP: (_) => PageSignUp(),
     };
